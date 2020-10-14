@@ -16,5 +16,5 @@ import org.junit.runners.Suite;
         , TestMockControllerHttp.class
         , TestRepoUser.class
 })
-public class SuiteTestUsserController {
+public class SuiteTestUserController {
 }
