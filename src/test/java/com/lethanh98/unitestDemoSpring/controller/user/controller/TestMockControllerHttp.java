@@ -48,17 +48,4 @@ public class TestMockControllerHttp {
                 .andExpect(jsonPath("$.data[1].lastName", is("tuan")))
         ;
     }
-    @Test
-    public void testGetAllUserNotMock() throws Exception {
-        mvc.perform(get("/api/users")
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content()
-                        .contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.data[0].firstName", is("le")))
-                .andExpect(jsonPath("$.data[0].lastName", is("thanh")))
-                .andExpect(jsonPath("$.data[1].firstName", is("le")))
-                .andExpect(jsonPath("$.data[1].lastName", is("tuan")))
-        ;
-    }
 }
